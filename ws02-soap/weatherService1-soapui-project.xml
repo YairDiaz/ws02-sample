@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="e18c11cd-3745-45b9-844c-f8db9e5e28a8" activeEnvironment="Default" name="weatherService1" resourceRoot="" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="19b08af9-730a-4042-8a25-bcdaec8c7346" wsaVersion="NONE" name="weatherService1Soap12Binding" type="wsdl" bindingName="{http://ws.apache.org/axis2}weatherService1Soap12Binding" soapVersion="1_2" anonymous="optional" definition="http://DESKTOP-VOA9HPO:8280/services/weatherService1?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://DESKTOP-VOA9HPO:8280/services/weatherService1?wsdl"><con:part><con:url>http://DESKTOP-VOA9HPO:8280/services/weatherService1?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://ws.apache.org/axis2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://ws.apache.org/axis2" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types/>
+  <wsdl:message name="in"/>
+  <wsdl:message name="out"/>
+  <wsdl:portType name="weatherService1PortType">
+    <wsdl:operation name="mediate">
+      <wsdl:input message="tns:in" wsaw:Action="urn:mediate"/>
+      <wsdl:output message="tns:out" wsaw:Action="urn:mediateResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="weatherService1Soap11Binding" type="tns:weatherService1PortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="mediate">
+      <soap:operation soapAction="urn:mediate" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="weatherService1Soap12Binding" type="tns:weatherService1PortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="mediate">
+      <soap12:operation soapAction="urn:mediate" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="weatherService1HttpBinding" type="tns:weatherService1PortType">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="mediate">
+      <http:operation location="mediate"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="weatherService1">
+    <wsdl:port name="weatherService1HttpSoap11Endpoint" binding="tns:weatherService1Soap11Binding">
+      <soap:address location="http://DESKTOP-VOA9HPO:8280/services/weatherService1.weatherService1HttpSoap11Endpoint"/>
+    </wsdl:port>
+    <wsdl:port name="weatherService1HttpsSoap11Endpoint" binding="tns:weatherService1Soap11Binding">
+      <soap:address location="https://DESKTOP-VOA9HPO:8243/services/weatherService1.weatherService1HttpsSoap11Endpoint"/>
+    </wsdl:port>
+    <wsdl:port name="weatherService1HttpSoap12Endpoint" binding="tns:weatherService1Soap12Binding">
+      <soap12:address location="http://DESKTOP-VOA9HPO:8280/services/weatherService1.weatherService1HttpSoap12Endpoint"/>
+    </wsdl:port>
+    <wsdl:port name="weatherService1HttpsSoap12Endpoint" binding="tns:weatherService1Soap12Binding">
+      <soap12:address location="https://DESKTOP-VOA9HPO:8243/services/weatherService1.weatherService1HttpsSoap12Endpoint"/>
+    </wsdl:port>
+    <wsdl:port name="weatherService1HttpEndpoint" binding="tns:weatherService1HttpBinding">
+      <http:address location="http://DESKTOP-VOA9HPO:8280/services/weatherService1.weatherService1HttpEndpoint"/>
+    </wsdl:port>
+    <wsdl:port name="weatherService1HttpsEndpoint" binding="tns:weatherService1HttpBinding">
+      <http:address location="https://DESKTOP-VOA9HPO:8243/services/weatherService1.weatherService1HttpsEndpoint"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://DESKTOP-VOA9HPO:8280/services/weatherService1.weatherService1HttpSoap12Endpoint</con:endpoint><con:endpoint>https://DESKTOP-VOA9HPO:8243/services/weatherService1.weatherService1HttpsSoap12Endpoint</con:endpoint></con:endpoints><con:operation id="ee5e1e83-fcf9-4195-9408-38cebd2acacb" isOneWay="false" action="urn:mediate" name="mediate" bindingOperationName="mediate" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d28bbc0f-2aca-4ed5-be00-99ea0ce88475" name="Request Iceland"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8280/services/weatherService1.weatherService1HttpSoap12Endpoint</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webserviceX.NET">
+   <soap:Header/>
+   <soap:Body>
+      <web:GetCitiesByCountry>
+         <!--Optional:-->
+         <web:CountryName>Iceland</web:CountryName>
+      </web:GetCitiesByCountry>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:mediate"/><con:wsrmConfig version="1.2"/></con:call><con:call id="4cef7111-e0d3-4105-b8ed-e68feeb8bf15" name="Request Slovenia"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8280/services/weatherService1.weatherService1HttpSoap12Endpoint</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webserviceX.NET">
+   <soap:Header/>
+   <soap:Body>
+      <web:GetCitiesByCountry>
+         <!--Optional:-->
+         <web:CountryName>Slovenia</web:CountryName>
+      </web:GetCitiesByCountry>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:mediate"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

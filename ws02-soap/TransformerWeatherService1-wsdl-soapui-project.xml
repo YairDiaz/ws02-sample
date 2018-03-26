@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="fca10035-53ff-438b-a12a-31c6dc6668fc" activeEnvironment="Default" name="TransformerWeatherService1?wsdl" resourceRoot="" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="202c1ede-594b-4857-8bd5-d0b2b5113990" wsaVersion="NONE" name="TransformerWeatherService1Soap12Binding" type="wsdl" bindingName="{http://ws.apache.org/axis2}TransformerWeatherService1Soap12Binding" soapVersion="1_2" anonymous="optional" definition="http://localhost:8280/services/TransformerWeatherService1?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8280/services/TransformerWeatherService1?wsdl"><con:part><con:url>http://localhost:8280/services/TransformerWeatherService1?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://ws.apache.org/axis2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://ws.apache.org/axis2" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types/>
+  <wsdl:message name="in"/>
+  <wsdl:message name="out"/>
+  <wsdl:portType name="TransformerWeatherService1PortType">
+    <wsdl:operation name="mediate">
+      <wsdl:input message="tns:in" wsaw:Action="urn:mediate"/>
+      <wsdl:output message="tns:out" wsaw:Action="urn:mediateResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TransformerWeatherService1Soap11Binding" type="tns:TransformerWeatherService1PortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="mediate">
+      <soap:operation soapAction="urn:mediate" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TransformerWeatherService1Soap12Binding" type="tns:TransformerWeatherService1PortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="mediate">
+      <soap12:operation soapAction="urn:mediate" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TransformerWeatherService1HttpBinding" type="tns:TransformerWeatherService1PortType">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="mediate">
+      <http:operation location="mediate"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TransformerWeatherService1">
+    <wsdl:port name="TransformerWeatherService1HttpSoap11Endpoint" binding="tns:TransformerWeatherService1Soap11Binding">
+      <soap:address location="http://DESKTOP-VOA9HPO:8280/services/TransformerWeatherService1.TransformerWeatherService1HttpSoap11Endpoint"/>
+    </wsdl:port>
+    <wsdl:port name="TransformerWeatherService1HttpsSoap11Endpoint" binding="tns:TransformerWeatherService1Soap11Binding">
+      <soap:address location="https://DESKTOP-VOA9HPO:8243/services/TransformerWeatherService1.TransformerWeatherService1HttpsSoap11Endpoint"/>
+    </wsdl:port>
+    <wsdl:port name="TransformerWeatherService1HttpsSoap12Endpoint" binding="tns:TransformerWeatherService1Soap12Binding">
+      <soap12:address location="https://DESKTOP-VOA9HPO:8243/services/TransformerWeatherService1.TransformerWeatherService1HttpsSoap12Endpoint"/>
+    </wsdl:port>
+    <wsdl:port name="TransformerWeatherService1HttpSoap12Endpoint" binding="tns:TransformerWeatherService1Soap12Binding">
+      <soap12:address location="http://DESKTOP-VOA9HPO:8280/services/TransformerWeatherService1.TransformerWeatherService1HttpSoap12Endpoint"/>
+    </wsdl:port>
+    <wsdl:port name="TransformerWeatherService1HttpEndpoint" binding="tns:TransformerWeatherService1HttpBinding">
+      <http:address location="http://DESKTOP-VOA9HPO:8280/services/TransformerWeatherService1.TransformerWeatherService1HttpEndpoint"/>
+    </wsdl:port>
+    <wsdl:port name="TransformerWeatherService1HttpsEndpoint" binding="tns:TransformerWeatherService1HttpBinding">
+      <http:address location="https://DESKTOP-VOA9HPO:8243/services/TransformerWeatherService1.TransformerWeatherService1HttpsEndpoint"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://DESKTOP-VOA9HPO:8280/services/TransformerWeatherService1.TransformerWeatherService1HttpSoap12Endpoint</con:endpoint><con:endpoint>https://DESKTOP-VOA9HPO:8243/services/TransformerWeatherService1.TransformerWeatherService1HttpsSoap12Endpoint</con:endpoint></con:endpoints><con:operation id="e68b9eb4-4f0e-46c6-93a8-9c73ac19cd69" isOneWay="false" action="urn:mediate" name="mediate" bindingOperationName="mediate" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9a8e6506-3c02-4add-b233-b4aa861c536a" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8280/services/TransformerWeatherService1.TransformerWeatherService1HttpSoap12Endpoint</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:echo="http://echo.services.core.carbon.wso2.org">
+   <soap:Header/>
+   <soap:Body>
+      <echo:echoOMElement>
+         <!--Optional:-->
+         <omEle>?</omEle>
+      </echo:echoOMElement>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:mediate"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
