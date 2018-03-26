@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="weatherService1" startOnLoad="true" transports="https http" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <endpoint name="endpoint_urn_uuid_867eda20-a9aa-433d-b5ca-736fae9ca7ec">
+            <address uri="http://www.webservicex.net/globalweather.asmx?wsdl"/>
+        </endpoint>
+        <inSequence>
+            <log description="in" level="full"/>
+        </inSequence>
+        <outSequence>
+            <log description="out" level="full"/>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </target>
+</proxy>

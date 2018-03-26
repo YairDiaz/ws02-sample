@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="TransformerWeatherService1" startOnLoad="true" transports="https http" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <endpoint name="endpoint_urn_uuid_a9708a7a-03b4-46fa-ae0c-745bf45b61d9">
+            <address uri="http://localhost:10500/mockechoSoap12Binding?wsdl"/>
+        </endpoint>
+        <inSequence/>
+        <outSequence>
+            <log description="beforeXSLTTransf" level="full"/>
+            <xslt description="transformer1" key="conf:myresources/extract-from-cdata.xslt"/>
+            <xslt description="transformer2" key="conf:myresources/format-service1-response.xslt"/>
+            <log description="afterXSLTTransf" level="full"/>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </target>
+</proxy>

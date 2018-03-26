@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="BackendMockWeatherService1" startOnLoad="true" transports="https http" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <endpoint name="endpoint_urn_uuid_75f51816-10c1-4dfd-8188-2c09a5ed204e">
+            <address uri="http://localhost:10500/mockechoSoap12Binding?wsdl"/>
+        </endpoint>
+        <inSequence>
+            <log description="in" level="full"/>
+        </inSequence>
+        <outSequence>
+            <log description="out" level="full"/>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </target>
+</proxy>

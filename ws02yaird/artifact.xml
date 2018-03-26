@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="TransformerWeatherService1" groupId="com.example.ws02yaird.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/TransformerWeatherService1.xml</file>
+    </artifact>
+    <artifact name="BackendMockWeatherService1" groupId="com.example.ws02yaird.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/BackendMockWeatherService1.xml</file>
+    </artifact>
+    <artifact name="weatherService1" groupId="com.example.ws02yaird.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/weatherService1.xml</file>
+    </artifact>
+</artifacts>
