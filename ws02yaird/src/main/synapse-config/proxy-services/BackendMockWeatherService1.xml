@@ -11,6 +11,12 @@
             <log description="out" level="full"/>
             <send/>
         </outSequence>
-        <faultSequence/>
+        <faultSequence>
+            <makefault version="soap11">
+                <code value="soap11Env:Server" xmlns:soap11Env="http://schemas.xmlsoap.org/soap/envelope/"/>
+                <reason value="Mock backend service unavailable"/>
+            </makefault>
+            <respond/>
+        </faultSequence>
     </target>
 </proxy>
